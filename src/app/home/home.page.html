@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -10,34 +10,15 @@
 </ion-header>
 
 <ion-content>
-    <ion-card class="welcome-card">
-      <img src="/assets/shapes.svg" alt="" />
+  <ion-list *ngFor="let c of classes">
+    <ion-card color={{c.color}} class="welcome-card">
       <ion-card-header>
-        <ion-card-subtitle>2th Period</ion-card-subtitle>
-        <ion-card-title>Honors English II</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>What is the hero's journey? We talked about it in class but...</p>
-      </ion-card-content>
+        <ion-card-subtitle>Period {{c.period}}</ion-card-subtitle>
+        <ion-card-title>{{c.name}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>{{c.desc}}</p>
+        </ion-card-content>
     </ion-card>
-    <ion-card class="welcome-card">
-      <img src="/assets/shapes.svg" alt="" />
-      <ion-card-header>
-        <ion-card-subtitle>4th Period</ion-card-subtitle>
-        <ion-card-title>Chemistry</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>I need help working through the titration problems on the homework...</p>
-      </ion-card-content>
-    </ion-card>
-    <ion-card class="welcome-card">
-      <img src="/assets/shapes.svg" alt="" />
-      <ion-card-header>
-        <ion-card-subtitle>6th Period</ion-card-subtitle>
-        <ion-card-title>World History</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Before the test, what was the cultural differences among early American civilizations...</p>
-      </ion-card-content>
-    </ion-card>
+  </ion-list>
 </ion-content>
