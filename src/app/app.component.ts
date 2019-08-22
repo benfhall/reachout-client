@@ -17,20 +17,15 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
+      title: 'Join',
+      url: '/join',
+      icon: 'add-circle'
     },
     {
-      title: 'Register',
-      url: '/register',
-      icon: 'signup'
+      title: 'Settings',
+      url: '/settings',
+      icon: 'settings'
     },
-    {
-      title: 'Logout',
-      url: '/logout',
-      icon: 'exit'
-    }
   ];
 
   constructor(

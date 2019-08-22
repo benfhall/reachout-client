@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -11,7 +11,8 @@
 
 <ion-content>
   <ion-list *ngFor="let c of classes">
-    <ion-card color={{c.color}} class="welcome-card">
+    <ion-card button=true class="welcome-card">
+      <ion-img src={{c.img}}></ion-img>
       <ion-card-header>
         <ion-card-subtitle>Period {{c.period}}</ion-card-subtitle>
         <ion-card-title>{{c.name}}</ion-card-title>

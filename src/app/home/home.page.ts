@@ -11,22 +11,22 @@ export class HomePage {
 
   public classes = [
     {
-      name: 'Chemistry',
-      url: '/chemistry',
-      color: 'secondary',
-      period: '2',
-    },
-    {
       name: 'Honors English II',
       url: '/chemistry',
-      color: 'secondary',
+      img: '../assets/green.svg',
+      period: '1',
+    },
+    {
+      name: 'Chemistry',
+      url: '/chemistry',
+      img: '../assets/blue.svg',
       period: '2',
     },
     {
       name: 'AP Statistics',
       url: '/chemistry',
-      color: 'secondary',
-      period: '2',
+      img: '../assets/red.svg',
+      period: '3',
     },
   ];
 

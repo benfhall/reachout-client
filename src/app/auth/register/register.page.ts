@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from  "@angular/router";
 import { AuthService } from '../auth.service';
+import { HttpModule } from '@angular/http';
 
 @Component({
   selector: 'app-register',
@@ -13,8 +14,9 @@ export class RegisterPage implements OnInit {
 
   register(form) {
     this.authService.register(form.value).subscribe((res) => {
-      this.router.navigateByUrl('home');
+
     });
+    this.router.navigateByUrl('home');
   }
 
   ngOnInit() {

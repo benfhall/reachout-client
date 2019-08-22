@@ -8,16 +8,20 @@
           </div>
           <div padding>
             <ion-item>
-              <ion-input  name="name" type="text" placeholder="Name" ngModel required></ion-input>
-            </ion-item>
+              <ion-label position="floating">Username</ion-label>
+              <ion-input  name="name" type="text" ngModel required></ion-input>
+            </ion-item><br>
             <ion-item>
-              <ion-input name="email" type="email" placeholder="your@email.com" ngModel required></ion-input>
-            </ion-item>
+              <ion-label position="floating">Email</ion-label>
+              <ion-input name="email" type="email" ngModel required></ion-input>
+            </ion-item><br>
             <ion-item>
-              <ion-input name="password" type="password" placeholder="Password" ngModel required></ion-input>
-            </ion-item>
+              <ion-label position="floating">Password</ion-label>
+              <ion-input name="password" type="password" ngModel required></ion-input>
+            </ion-item><br>
             <ion-item>
-              <ion-input name="confirm" type="password" placeholder="Retype Password" ngModel required></ion-input>
+              <ion-label position="floating">Re-enter Password</ion-label>
+              <ion-input name="confirm" type="password" ngModel required></ion-input>
             </ion-item>
           </div>
           <div padding>
@@ -27,4 +31,7 @@
       </ion-row>
     </ion-grid>
   </form>
+  <div padding>
+    <ion-button  size="large" type="login" routerLink="/login" expand="block">Go back</ion-button>
+  </div>
 </ion-content>
