@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -11,22 +12,34 @@ export class HomePage {
 
   public classes = [
     {
-      name: 'Honors English II',
-      url: '/chemistry',
+      name: 'AP Composition',
+      url: '/ap-composition',
       img: '../assets/green.svg',
       period: '1',
     },
     {
-      name: 'Chemistry',
-      url: '/chemistry',
+      name: 'AP Chemistry',
+      url: '/ap_chemistry',
       img: '../assets/blue.svg',
       period: '2',
     },
     {
       name: 'AP Statistics',
-      url: '/chemistry',
+      url: '/ap_statistics',
       img: '../assets/red.svg',
       period: '3',
+    },
+    {
+      name: 'American Government',
+      url: '/american_gov',
+      img: '../assets/purple.svg',
+      period: '4',
+    },
+    {
+      name: 'AP Computer Science',
+      url: '/ap_compsci',
+      img: '../assets/orange.svg',
+      period: '5',
     },
   ];
 

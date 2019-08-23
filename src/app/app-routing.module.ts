@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { HttpModule } from '@angular/http';
+import { HTTP } from '@ionic-native/http/ngx';
 
 const routes: Routes = [
   {
@@ -13,7 +13,9 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
   { path:  'register', loadChildren:  './auth/register/register.module#RegisterPageModule' },
-  { path: 'logout', loadChildren: './logout/logout.module#LogoutPageModule' },  { path: 'login', loadChildren: './auth/login/login.module#LoginPageModule' },
+  { path:  'login', loadChildren:  './auth/login/login.module#LoginPageModule' },
+  { path: 'ap-composition', loadChildren: './classes/ap-composition/ap-composition.module#ApCompositionPageModule' },
+  { path: 'join', loadChildren: './join/join.module#JoinPageModule' },
 
 ];
 

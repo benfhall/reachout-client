@@ -11,8 +11,14 @@
 
 <ion-content>
   <ion-list *ngFor="let c of classes">
-    <ion-card button=true class="welcome-card">
+    <ion-reorder-group id="reorder">
+    <ion-card button=true class="welcome-card" href={{c.url}}>
       <ion-img src={{c.img}}></ion-img>
+      <ion-fab size="small" vertical="top" horizontal="end" slot="fixed">
+        <ion-fab-button color="light" >
+          <ion-icon name="cog"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
       <ion-card-header>
         <ion-card-subtitle>Period {{c.period}}</ion-card-subtitle>
         <ion-card-title>{{c.name}}</ion-card-title>
@@ -20,6 +26,8 @@
         <ion-card-content>
           <p>{{c.desc}}</p>
         </ion-card-content>
+        <ion-reorder slot="end"></ion-reorder>
     </ion-card>
+    </ion-reorder-group>
   </ion-list>
 </ion-content>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from  "@angular/router";
 import { AuthService } from '../auth.service';
-import { HttpModule } from '@angular/http';
+import { HTTP } from '@ionic-native/http/ngx';
 
 @Component({
   selector: 'app-register',

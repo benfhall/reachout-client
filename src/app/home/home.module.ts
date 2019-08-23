@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
-import { HttpModule } from '@angular/http';
+import { HTTP } from '@ionic-native/http/ngx';
 
 import { HomePage } from './home.page';
 

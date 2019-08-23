@@ -21,11 +21,6 @@ export class AppComponent {
       url: '/join',
       icon: 'add-circle'
     },
-    {
-      title: 'Settings',
-      url: '/settings',
-      icon: 'settings'
-    },
   ];
 
   constructor(
