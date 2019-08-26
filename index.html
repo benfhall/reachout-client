@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<head>
+
+  <title>ReachOut</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="device-mockups/device-mockups.min.css">
+
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" src="js/scroll.js"></script>
+  <script type="text/javascript" src="js/nav.js"></script>
+
+  <link rel="icon" type="image/png" href="img/logo_icon.svg">
+
+</head>
+
+<body>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img class="closebtnimg" src="img/left-arrow.svg"></a>
+    <div class="navLinks">
+      <a onclick="scrollToStart(); closeNav()">Home</a>
+      <a onclick="scrollToAbout(); closeNav()">About</a>
+      <a onclick="scrollToFeat(); closeNav()">Features</a>
+      <a onclick="scrollToDownload(); closeNav()">Download</a>
+    </div>
+  </div>
+
+	<div class="" id="blockMain">
+
+    <span class="openbtn" onclick="openNav()"><img class="openbtnimg" src="img/logo_icon.svg"></span>
+
+		<div class="titleArea">
+
+			<p class="title"><img src="img/logo_full.svg" height="300px"></p>
+			<div class="startScrollContainer">
+				<a onclick="scrollToAbout()"><img class="startScroll" src="img/down-arrow.svg"></a>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="parallax"></div>
+
+  <div id="about">
+
+    <p class="sectionTitle">About</p>
+    <p class="sectionDesc">
+      FINDining is a revolutionary new app that solves the problem of not knowing where to eat and not being able to find new, local restaurants.
+      FINDining's advanced restaurant recommendation algorithm uses your eating preferences and tastes in order to give you unique restaurant recommendations.<br><br>
+      FINDining can also be used socially. Add your friends within the app to see what restaurants they liked and where they ate at.
+      Get together with a group of friends to create a group within the app and receive restaurant recommendations for the entire group.
+    </p>
+
+	<div class="desktop"><br></div>
+
+	<table id="desktop-table">
+
+		<tr>
+
+			<th>
+				<div class="device-container leftscreenshot">
+					<div class="device-mockup iphone6_plus portrait white">
+						<div class="device">
+							<div class="screen">
+								<!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+								<img src="img/home_screenshot.png" class="img-fluid" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</th>
+
+			<th>
+				<div class="device-container rightscreenshot">
+					<div class="device-mockup iphone6_plus portrait white">
+						<div class="device">
+							<div class="screen">
+								<!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+								<img src="img/restaurant_screenshot.png" class="img-fluid" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</th>
+
+		</tr>
+
+	</table>
+
+
+  </div>
+
+  <div class="parallax"></div>
+
+  <div id="features">
+
+    <p class="sectionTitle">Features</p>
+
+    <table id="desktop-table" align="center">
+
+      <tr class="featuresTR">
+
+        <th>
+          <img class="featureImg" src="img/discover.svg"><br>
+          <p class="featureTitle">Discover</p><br>
+          <p class="sectionDesc">Find new and local restaurants that align with your tastes and eating preferences.</p>
+        </th>
+
+        <th>
+          <img class="featureImg" src="img/friends.svg"><br>
+          <p class="featureTitle">Friends</p><br>
+          <p class="sectionDesc">Add friends within the app and discover which restaurants your friends like.</p>
+        </th>
+
+        <th>
+          <img class="featureImg" src="img/groups.svg"><br>
+          <p class="featureTitle">Groups</p><br>
+          <p class="sectionDesc">Get together with your friends and create groups where you can receive group recommendations based on the tastes of everyone in the group.</p>
+        </th>
+
+      </tr>
+
+    </table>
+
+    <table id="mobile-table" align="center">
+
+      <tr class="featuresTR">
+
+        <th>
+          <img class="featureImg" src="img/discover.svg"><br>
+          <p class="featureTitle">Discover</p><br>
+          <p class="sectionDesc">Find new and local restaurants that align with your tastes and eating preferences.</p>
+        </th>
+
+      </tr>
+
+      <tr class="featuresTR">
+
+        <th>
+          <img class="featureImg" src="img/friends.svg"><br>
+          <p class="featureTitle">Friends</p><br>
+          <p class="sectionDesc">Add friends within the app and discover which restaurants your friends like.</p>
+        </th>
+
+      </tr>
+      <tr class="featuresTR">
+
+        <th>
+          <img class="featureImg" src="img/groups.svg"><br>
+          <p class="featureTitle">Groups</p><br>
+          <p class="sectionDesc">Get together with your friends and create groups where you can receive group recommendations based on the tastes of everyone in the group.</p>
+        </th>
+
+      </tr>
+
+    </table>
+
+  </div>
+
+  <div class="parallax"></div>
+
+  <div id="download">
+
+    <p class="sectionTitle">Download</p>
+    <p class="sectionDesc">
+      FINDining in currently in a beta-testing phase and will be available on the App Store and the Google Play Store in mid-April.<br><br>
+        The app will initially be limited to the Omaha, NE area. We plan to expand to other cities throughout 2018 and 2019.
+    </p>
+
+  </div>
+
+  <div id="footer">
+    <p class="sectionDesc">
+        <a class="sectionDesc privacyLink footerText" href="/privacy">Privacy Policy</a>
+    </p>
+    <p class="sectionDesc">
+        <a class="sectionDesc privacyLink footerText" href="mailto:benwingerter01@gmail.com">Contact Us</a>
+    </p>
+	<p class="sectionDesc footerText">&copy;
+        <script type="text/javascript">
+            document.write(new Date().getFullYear());
+        </script>
+        FINDining
+	</p>
+  </div>
+
+</body>

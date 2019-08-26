@@ -1,0 +1,81 @@
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #1b1464;
+  overflow: hidden;
+  transition: 0.5s;
+  padding-top: 4.75em;
+  text-align:center;
+}
+
+.navLinks {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.navLinks a {
+  font-family: "Roboto Slab";
+  padding: .25em .25em .25em .25em;
+  text-decoration: none;
+  font-size: 2.25em;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.navLinks a:hover {
+  font-size: 3.25em;
+}
+
+.sidenav a:hover{
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  right: 2.25em;
+  font-size: 3.25em;
+  margin-left: 4.5em;
+}
+
+.openbtn {
+	position: fixed;
+	left: 0;
+	top: 0;
+	margin-left: .75em;
+	margin-top: 1em;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.closebtn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  text-decoration: none;
+  filter: invert(1);
+}
+
+.closebtnimg {
+  width: 1em;
+  height: 1em;
+  transition: 0.3s;
+}
+
+.closebtnimg:hover {
+  transform: translateX(-.25em);
+}
+
+.openbtnimg {
+  width: 2em;
+  height: 2em;
+}
