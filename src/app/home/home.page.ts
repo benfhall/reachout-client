@@ -14,31 +14,31 @@ export class HomePage {
     {
       name: 'AP Composition',
       url: '/ap-composition',
-      img: '../assets/green.svg',
+      color: 'green',
       period: '1',
     },
     {
       name: 'AP Chemistry',
       url: '/ap_chemistry',
-      img: '../assets/blue.svg',
+      color: 'blue',
       period: '2',
     },
     {
       name: 'AP Statistics',
       url: '/ap_statistics',
-      img: '../assets/red.svg',
+      color: 'red',
       period: '3',
     },
     {
       name: 'American Government',
       url: '/american_gov',
-      img: '../assets/purple.svg',
+      color: 'purple',
       period: '4',
     },
     {
       name: 'AP Computer Science',
       url: '/ap_compsci',
-      img: '../assets/orange.svg',
+      color: 'orange',
       period: '5',
     },
   ];
