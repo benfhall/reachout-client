@@ -16,7 +16,7 @@
     <ion-reorder-group id="reorder">
     <ion-card button=true class="welcome-card" href={{c.url}}>
       <div class={{c.color}}></div>
-      <ion-fab size="small" vertical="top" horizontal="end" slot="fixed">
+      <ion-fab (click)="classSettingsActionSheet()" size="small" vertical="top" horizontal="end" slot="fixed">
         <ion-fab-button color="light" >
           <ion-icon name="cog"></ion-icon>
         </ion-fab-button>
@@ -24,6 +24,7 @@
       <ion-card-header>
         <ion-card-subtitle>Period {{c.period}}</ion-card-subtitle>
         <ion-card-title>{{c.name}}</ion-card-title>
+        <ion-card-subtitle>{{c.teacher}}</ion-card-subtitle>
         </ion-card-header>
         <ion-reorder slot="end"></ion-reorder>
     </ion-card>

@@ -26,34 +26,14 @@ export class ApCompositionPage implements OnInit {
       date: 'Oct. 27th, 2019',
     },
     {
-      title: 'What pages did we have to read for homework?',
-      author: 'John Smith',
-      date: 'Nov. 1st, 2019',
-    },
-    {
-      title: 'How long did your essay take to write?',
-      author: 'Ben Hall',
-      date: 'Oct. 28th, 2019',
-    },
-    {
-      title: 'What pages was the essay prompt reffering to?',
-      author: 'Cian Weekly',
+      title: 'How much time do we get for our next timed write?',
+      author: 'Denise Mitchell',
       date: 'Oct. 27th, 2019',
     },
     {
-      title: 'What pages did we have to read for homework?',
-      author: 'John Smith',
-      date: 'Nov. 1st, 2019',
-    },
-    {
-      title: 'How long did your essay take to write?',
-      author: 'Ben Hall',
-      date: 'Oct. 28th, 2019',
-    },
-    {
-      title: 'What pages was the essay prompt reffering to?',
-      author: 'Cian Weekly',
-      date: 'Oct. 27th, 2019',
+      title: 'Does anyone know where to buy the used book for the class?',
+      author: 'Leo Morrison',
+      date: 'Oct. 25th, 2019',
     },
   ];
 
