@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-buttons routerLink="/home" slot="start">
+    <ion-buttons [routerLink]="['/home']" slot="start">
       <ion-icon name="arrow-back"></ion-icon>
     </ion-buttons>
     <ion-title id="classTitle">Class</ion-title>
@@ -9,7 +9,7 @@
 
 
 <ion-content>
-  <ion-item *ngFor="let m of showedMessages" type=button detail=true>
+  <ion-item *ngFor="let m of showedMessages" type=button detail=true [routerLink]="['/messages']" [queryParams]="{mid: m.id}">
     <ion-label>
       <h2>{{ m.author }}</h2>
       <h3>{{ m.title }}</h3>

@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar *ngFor="let dm of displayMessage" color="primary">
+    <ion-buttons [routerLink]="['/classes']" [queryParams]="{id: dm.superID}" slot="start">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-buttons>
+    <ion-title>Messages</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+    <ion-card *ngFor="let dm of displayMessage" color=primary>
+        <ion-card-header>
+          <ion-card-subtitle>{{ dm.author }}</ion-card-subtitle>
+          <ion-card-title>{{ dm.title }}</ion-card-title><br>
+          <ion-card-subtitle>{{ dm.date }}</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+      <ion-card *ngFor="let dc of displayComments">
+          <ion-card-header>
+            <ion-card-subtitle>{{ dc.author }}</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+              {{ dc.title }}
+          </ion-card-content>
+        </ion-card>
+        <ion-fab size="small" vertical="bottom" horizontal="end" slot="fixed">
+            <ion-fab-button color="primary">
+              <ion-icon name="create"></ion-icon>
+            </ion-fab-button>
+          </ion-fab>
+</ion-content>

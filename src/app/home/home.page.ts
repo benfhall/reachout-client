@@ -1,8 +1,7 @@
 declare var require: any
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActionSheetController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
-var classes = require('./classes.json');
 
 @Component({
   selector: 'app-home',
@@ -10,23 +9,60 @@ var classes = require('./classes.json');
   styleUrls: ['home.page.scss'],
 })
 
-export class HomePage {
+export class HomePage{
 
-  constructor(public actionSheetController: ActionSheetController, public alertController: AlertController) {}
+  constructor(public actionSheetController: ActionSheetController, public alertController: AlertController) {
+  }
 
-  public classes = require('./classes.json');
+  public classes = 
+  [
+    {
+      "id": 0,
+      "name": "AP Composition",
+      "color": "green",
+      "teacher": "Ms. Townley",
+      "period": "1"
+    },
+    {
+      "id": 1,
+      "name": "AP Chemistry",
+      "color": "blue",
+      "teacher": "Mr. Clark",
+      "period": "2"
+    },
+    {
+      "id": 2,
+      "name": "AP Statistics",
+      "color": "red",
+      "teacher": "Mrs. Gregor",
+      "period": "3"
+    },
+    {
+      "id": 3,
+      "name": "American Government",
+      "color": "orange",
+      "teacher": "Mr. Justice",
+      "period": "4"
+    },
+    {
+      "id": 4,
+      "name": "AP Computer Science A",
+      "color": "purple",
+      "teacher": "Mr. Pacer",
+      "period": "5"
+    }
+  ];
 
   async updateClasses() {
-    for (var i=0; i<classes.length; i++)
+    for (var i=0; i<this.classes.length; i++)
     {
-      var classID = classes[i].id;
-      var classStorage = localStorage.getItem(classID);
+      var classID = this.classes[i].id;
+      var classStorage = localStorage.getItem(JSON.stringify(classID));
       classStorage = JSON.parse(classStorage);
       var color = classStorage['color'];
       var name = classStorage['name'];
-      classes[i].name = name;
-      classes[i].color = color;
-  
+      this.classes[i].name = name;
+      this.classes[i].color = color; 
       console.log("Updating Classes...");
     }
   };
@@ -57,15 +93,15 @@ export class HomePage {
             console.log(JSON.stringify(data));
             console.log(data.newClassName);
 
-            for (var i=0; i<classes.length; i++)
+            for (var i=0; i<this.classes.length; i++)
             {
-              if (classes[i].id == classID) {
+              if (this.classes[i].id == classID) {
 
                 var classStorage = localStorage.getItem(classID);
                 classStorage = classStorage ? JSON.parse(classStorage) : {};
                 classStorage['name'] = data.newClassName;
                 localStorage.setItem(classID, JSON.stringify(classStorage));
-                classes[i].name = data.newClassName;
+                this.classes[i].name = data.newClassName;
                 console.log("Changing class (ID:" + classID + ") name to " + data.newClassName);
                 break;
               }
@@ -126,15 +162,15 @@ export class HomePage {
           handler: (data:string) => {
             console.log('Confirm color change.');
 
-            for (var i=0; i<classes.length; i++)
+            for (var i=0; i<this.classes.length; i++)
             {
-              if (classes[i].id == classID) {
+              if (this.classes[i].id == classID) {
 
                 var classStorage = localStorage.getItem(classID);
                 classStorage = classStorage ? JSON.parse(classStorage) : {};
                 classStorage['color'] = data;
                 localStorage.setItem(classID, JSON.stringify(classStorage));
-                classes[i].color = data;
+                this.classes[i].color = data;
                 console.log("Changing class (ID:" + classID + ") color to " + data);
                 break;
               }
@@ -199,4 +235,5 @@ export class HomePage {
   ngOnInit() {
     this.updateClasses();
   }
+
 }

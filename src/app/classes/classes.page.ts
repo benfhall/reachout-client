@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 var messages = require('./messages.json');
 var classes = require('../home/classes.json');
 
-
 @Component({
   selector: 'app-classes',
   templateUrl: './classes.page.html',

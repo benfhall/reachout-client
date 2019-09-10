@@ -10,18 +10,21 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule),
+    runGuardsAndResolvers: "always"
   },
+  
   { path:  'register', loadChildren:  './auth/register/register.module#RegisterPageModule' },
   { path:  'login', loadChildren:  './auth/login/login.module#LoginPageModule' },
   { path: 'classes', loadChildren: './classes/classes.module#ClassesPageModule' },
-  { path: 'join', loadChildren: './join/join.module#JoinPageModule' },
+  { path: 'join', loadChildren: './join/join.module#JoinPageModule' },  { path: 'messages', loadChildren: './messages/messages.module#MessagesPageModule' },
+
 
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, {onSameUrlNavigation: 'reload', preloadingStrategy: PreloadAllModules })
   ],
   exports: [RouterModule]
 })
