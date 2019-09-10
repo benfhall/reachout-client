@@ -1,5 +1,8 @@
+declare var require: any
 import { Component, OnInit } from '@angular/core';
+var messages = require('./messages.json');
 var classes = require('../home/classes.json');
+
 
 @Component({
   selector: 'app-classes',
@@ -10,11 +13,18 @@ export class ClassesPage implements OnInit {
 
   constructor() { }
 
+  public messages = require('./messages.json');
+
+  public showedMessages = [];
+
   ngOnInit() {
 
   var urlParams = new URLSearchParams(window.location.search);
 
   var classID = urlParams.get('id');
+
+  this.showedMessages = messages.filter(({superID}) => superID == classID);
+  console.log(this.showedMessages);
 
   for (var i=0; i<classes.length; i++)
     {
@@ -25,11 +35,14 @@ export class ClassesPage implements OnInit {
         var classTitle = String(classTitleStorage['name']);
         console.log(classTitle);
         document.getElementById("classTitle").innerHTML = classTitle;
-        break;
       }
+
+      break;
     
     }
-  
+
   }
 
 }
+
+

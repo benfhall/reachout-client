@@ -9,7 +9,7 @@
 
 
 <ion-content>
-  <ion-item *ngFor="let m of messages" type=button detail=true href="">
+  <ion-item *ngFor="let m of showedMessages" type=button detail=true>
     <ion-label>
       <h2>{{ m.author }}</h2>
       <h3>{{ m.title }}</h3>

@@ -1,31 +1,37 @@
 
-[{
-    "id": 1,
+[
+  {
+    "id": 0,
     "name": "AP Composition",
+    "color": "green",
     "teacher": "Ms. Townley",
     "period": "1"
   },
   {
-    "id": 2,
+    "id": 1,
     "name": "AP Chemistry",
+    "color": "blue",
     "teacher": "Mr. Clark",
     "period": "2"
   },
   {
-    "id": 3,
+    "id": 2,
     "name": "AP Statistics",
+    "color": "red",
     "teacher": "Mrs. Gregor",
     "period": "3"
   },
   {
-    "id": 4,
+    "id": 3,
     "name": "American Government",
+    "color": "orange",
     "teacher": "Mr. Justice",
     "period": "4"
   },
   {
-    "id": 5,
+    "id": 4,
     "name": "AP Computer Science A",
+    "color": "purple",
     "teacher": "Mr. Pacer",
     "period": "5"
   }

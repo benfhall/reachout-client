@@ -1,3 +1,4 @@
+declare var require: any
 import { Component } from '@angular/core';
 import { ActionSheetController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
