@@ -11,19 +11,21 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content onload="updateClasses()">
   <ion-list *ngFor="let c of classes">
     <ion-reorder-group id="reorder">
-    <ion-card button=true class="welcome-card" href={{c.url}}>
+        <ion-fab (click)="classSettingsActionSheet(c.id)" size="small" vertical="top" horizontal="end" slot="fixed">
+            <ion-fab-button color="light">
+              <ion-icon name="cog"></ion-icon>
+            </ion-fab-button>
+          </ion-fab>
+    <ion-card button=true class="welcome-card" [routerLink]="['/classes']" [queryParams]="{id: c.id}">
       <div class={{c.color}}></div>
-      <ion-fab (click)="classSettingsActionSheet()" size="small" vertical="top" horizontal="end" slot="fixed">
-        <ion-fab-button color="light" >
-          <ion-icon name="cog"></ion-icon>
-        </ion-fab-button>
-      </ion-fab>
       <ion-card-header>
         <ion-card-subtitle>Period {{c.period}}</ion-card-subtitle>
-        <ion-card-title>{{c.name}}</ion-card-title>
+        <ion-card-title>
+          {{c.name}}
+        </ion-card-title>
         <ion-card-subtitle>{{c.teacher}}</ion-card-subtitle>
         </ion-card-header>
         <ion-reorder slot="end"></ion-reorder>

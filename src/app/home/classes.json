@@ -1,0 +1,32 @@
+
+[{
+    "id": 1,
+    "name": "AP Composition",
+    "teacher": "Ms. Townley",
+    "period": "1"
+  },
+  {
+    "id": 2,
+    "name": "AP Chemistry",
+    "teacher": "Mr. Clark",
+    "period": "2"
+  },
+  {
+    "id": 3,
+    "name": "AP Statistics",
+    "teacher": "Mrs. Gregor",
+    "period": "3"
+  },
+  {
+    "id": 4,
+    "name": "American Government",
+    "teacher": "Mr. Justice",
+    "period": "4"
+  },
+  {
+    "id": 5,
+    "name": "AP Computer Science A",
+    "teacher": "Mr. Pacer",
+    "period": "5"
+  }
+]

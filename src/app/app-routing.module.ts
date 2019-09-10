@@ -14,7 +14,7 @@ const routes: Routes = [
   },
   { path:  'register', loadChildren:  './auth/register/register.module#RegisterPageModule' },
   { path:  'login', loadChildren:  './auth/login/login.module#LoginPageModule' },
-  { path: 'ap-composition', loadChildren: './classes/ap-composition/ap-composition.module#ApCompositionPageModule' },
+  { path: 'classes', loadChildren: './classes/classes.module#ClassesPageModule' },
   { path: 'join', loadChildren: './join/join.module#JoinPageModule' },
 
 ];

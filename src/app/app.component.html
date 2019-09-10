@@ -16,12 +16,14 @@
               </ion-label>
             </ion-item>
           </ion-menu-toggle>
-          <ion-item routerDirection="'root'" routerLink="/login" >
+          <ion-menu-toggle>
+          <ion-item auto-hide="false" routerDirection="'root'" routerLink="/login">
             <ion-icon slot="start" name="exit"></ion-icon>
             <ion-label>
               Logout
             </ion-label>
           </ion-item>
+          </ion-menu-toggle>
         </ion-list>
       </ion-content>
     </ion-menu>
