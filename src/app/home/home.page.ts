@@ -183,11 +183,23 @@ export class HomePage{
     await alert.present();
   }
   
-  async confirmClassDeletion() {
+  async confirmClassDeletion(classID) {
     const alert = await this.alertController.create({
       header: 'Confirm',
       message: 'Are you sure you want to leave this class?',
-      buttons: ['Cancel', 'Confirm']
+      buttons: [{
+        text: 'Cancel',
+      }, {
+        text: 'Confirm',
+        handler: () => {
+          for (var i=0; i<this.classes.length; i++)
+            {
+              if (this.classes[i].id == classID) {
+
+              }
+            }
+        }
+      }]
     });
 
     await alert.present();
@@ -203,7 +215,7 @@ export class HomePage{
         icon: 'exit',
         handler: () => {
           console.log('Selected Leave');
-          this.confirmClassDeletion();
+          this.confirmClassDeletion(classID);
         }
       }, {
         text: 'Change Color',

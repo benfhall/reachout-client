@@ -44,6 +44,9 @@ export class AuthService {
    );
  }
 
+ sendMessage(user: User) {
+ }
+
  async logout() {
    await this.storage.remove("ACCESS_TOKEN");
    await this.storage.remove("EXPIRES_IN");

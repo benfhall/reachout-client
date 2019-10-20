@@ -25,9 +25,21 @@
               {{ dc.title }}
           </ion-card-content>
         </ion-card>
-        <ion-fab size="small" vertical="bottom" horizontal="end" slot="fixed">
-            <ion-fab-button color="primary">
-              <ion-icon name="create"></ion-icon>
-            </ion-fab-button>
-          </ion-fab>
 </ion-content>
+
+
+<ion-footer>
+  <ion-toolbar class="messageBar">
+    <form  #form="ngForm" (ngSubmit)="sendMessage(form)">
+      <ion-grid>
+        <ion-row>
+          <ion-input type="text" name="title" ngControl="title" placeholder="Enter Message"></ion-input>
+          <ion-button type="submit" fill=clear>
+            <ion-icon slot="icon-only" name="send"></ion-icon>
+          </ion-button>
+        </ion-row>
+      </ion-grid>
+    </form>
+  </ion-toolbar>
+</ion-footer>
+

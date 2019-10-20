@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from  "@angular/router";
+import { AuthService } from '../auth/auth.service';
 var messages = require('../classes/messages.json');
-var classes = require('../home/classes.json');
 var comments = require('../comments.json');
 
 @Component({
@@ -10,12 +11,20 @@ var comments = require('../comments.json');
 })
 export class MessagesPage implements OnInit {
 
-  constructor() { }
+  constructor(private  authService: AuthService, private  router:  Router) { }
 
   public displayMessage = [];
   public displayComments = [];
   public messages = require('../classes/messages.json');
   public comments = require('../comments.json');
+
+  sendMessage(form){
+    console.log(form.title);
+    this.displayComments.push({
+      author:"Ben Hall",
+      title: form.title
+      });
+  }
 
   ngOnInit() {
 
@@ -29,5 +38,4 @@ export class MessagesPage implements OnInit {
     console.log(this.displayComments);
 
   }
-
 }
