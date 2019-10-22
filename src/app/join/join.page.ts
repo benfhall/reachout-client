@@ -15,14 +15,14 @@ export class JoinPage implements OnInit {
     var formID = form.id;
     var formPWD = form.password;
 
-    if (j = formID) {
-      if (formPWD = this.newClasses[j].password) {
-        localStorage.getItem(JSON.stringify(form.id));
-        localStorage.getItem(JSON.stringify(form.password));
-      } else {
-        console.log("No class found from ID.")
-      }
-    }
+    // if (j = formID) {
+    //   if (formPWD = this.newClasses[j].password) {
+    //     localStorage.getItem(JSON.stringify(form.id));
+    //     localStorage.getItem(JSON.stringify(form.password));
+    //   } else {
+    //     console.log("No class found from ID.")
+    //   }
+    // }
     
   }
 
